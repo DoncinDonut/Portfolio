@@ -37,9 +37,8 @@ export default function DashboardPage() {
       <Box
         sx={{
           minHeight: '100vh',
-          background:
-            'radial-gradient(1200px circle at top, #0F172A 0%, #020617 60%)',
-          py: 6,
+          background: 'radial-gradient(1200px circle at top, #0F172A 0%, #020617 60%)',
+          py: 6
         }}
       >
         {/* INTRO */}

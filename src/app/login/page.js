@@ -14,6 +14,9 @@ import Container from '@mui/material/Container';
 
 import Box from '@mui/material/Box';
 
+import CssBaseline from '@mui/material/CssBaseline';
+
+
 export default function loginPage() {
 
     const handleSubmit = (event) => {
@@ -67,110 +70,118 @@ export default function loginPage() {
 
                         return (
 
-                            <Box sx = {{
-                                    backgroundImage: "url('/images/Background_Img.png')",
-                                    minHeight: '100vh',
-                                              py: 6,
-                                    opacity: 0.8
-                                }}
-                            >
+                            <>
+                                  {/* ✅ CssBaseline fixes browser default white margins */}
+                                  <CssBaseline />
 
-                            <Container maxWidth = "sm">
-
-                                {/* Centers everything on the screen */}
-                                <Box sx = {{
+                                  {/* PAGE BACKGROUND */}
+                                  <Box sx={{
                                         height: '100vh',
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
+                                        width: '100vw',
+                                        backgroundImage: "url('/images/Background_Img.png')",
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                        backgroundRepeat: 'no-repeat',
+                                        overflow: 'hidden',
                                     }}
-                                >
+                                  >
+                                    <Container maxWidth="sm" disableGutters>
 
-                                {/* Form submit handler */}
-                                <Box component = "form" onSubmit = {handleSubmit} noValidate sx = {{
-                                        position: 'relative',
-                                        width: '100%',
-                                        maxWidth: 400,
-                                        borderRadius: 2,
-                                        overflow: 'auto',
-                                        padding: 4,
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        alignItems: 'center'
-                                    }}
-                                >
-
-                                {/* Background of/and form inputs */}
-                                <Box sx = {{ position: 'relative' }}>
-
-                                    {/* Form Background */}
-                                        <Box sx = {{
-                                            position: 'absolute',
-                                            inset: 0,
-                                            backgroundColor: '#212121',
-                                            opacity: 0.4,
-                                            zIndex: 0,
-                                            borderRadius: 2
+                                      {/* Centers everything on the screen */}
+                                      <Box sx={{
+                                            height: '100vh',
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
                                         }}
-                                    />
+                                      >
 
-                                    {/* Header for form */}
-                                    <h1 style = {{
-                                        padding: 20,
-                                        textAlign: 'center'
-                                    }}>
-                                        Enter Code
-                                    </h1>
-
-                                    {/* Spacing for background of form */}
-                                    <Box sx = {{
+                                    {/* Form submit handler */}
+                                    <Box component = "form" onSubmit = {handleSubmit} noValidate sx = {{
                                             position: 'relative',
-                                            zIndex: 1,
-                                            padding: 4
-                                        }}
-                                    >
-
-                                    {/* Text field positioning */}
-                                    <Box sx = {{
                                             width: '100%',
-                                            textAlign: 'center',
+                                            maxWidth: 400,
+                                            borderRadius: 2,
+                                            overflow: 'auto',
+                                            padding: 4,
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            alignItems: 'center'
                                         }}
                                     >
 
-                                        {/* Code input field */}
-                                        <TextField sx = {{ backgroundColor: '#ffff' }}
-                                            required
-                                            id = "code"
-                                            name = "code"
-                                            autoFocus
-                                        />
-                                    </Box>
+                                    {/* Background of/and form inputs */}
+                                    <Box sx = {{ position: 'relative' }}>
 
-                                    {/* Login button positioning */}
-                                    <Box sx = {{
-                                            width: '100%',
-                                            textAlign: 'center'
-                                        }}
-                                    >
-
-                                        {/* Login button positioning */}
-                                        <Button type = "submit" fullWidth variant = "contained" sx = {{
-                                                marginTop: 5,
-                                                backgroundColor:'#18A558',
-                                                width: 210,
-                                                fontSize: '18px',
+                                        {/* Form Background */}
+                                            <Box sx = {{
+                                                position: 'absolute',
+                                                inset: 0,
+                                                backgroundColor: '#212121',
+                                                opacity: 0.4,
+                                                zIndex: 0,
                                                 borderRadius: 2
                                             }}
+                                        />
+
+                                        {/* Header for form */}
+                                        <h1 style = {{
+                                            padding: 20,
+                                            textAlign: 'center'
+                                        }}>
+                                            Enter Code
+                                        </h1>
+
+                                        {/* Spacing for background of form */}
+                                        <Box sx = {{
+                                                position: 'relative',
+                                                zIndex: 1,
+                                                padding: 4
+                                            }}
                                         >
-                                            LOGIN
-                                        </Button>
+
+                                        {/* Text field positioning */}
+                                        <Box sx = {{
+                                                width: '100%',
+                                                textAlign: 'center',
+                                            }}
+                                        >
+
+                                            {/* Code input field */}
+                                            <TextField sx = {{ backgroundColor: '#ffff' }}
+                                                required
+                                                id = "code"
+                                                name = "code"
+                                                autoFocus
+                                            />
+                                        </Box>
+
+                                        {/* Login button positioning */}
+                                        <Box sx = {{
+                                                width: '100%',
+                                                textAlign: 'center'
+                                            }}
+                                        >
+
+                                            {/* Login button positioning */}
+                                            <Button type = "submit" fullWidth variant = "contained" sx = {{
+                                                    marginTop: 5,
+                                                    backgroundColor:'#18A558',
+                                                    width: 210,
+                                                    fontSize: '18px',
+                                                    borderRadius: 2
+                                                }}
+                                            >
+                                                LOGIN
+                                            </Button>
+                                        </Box>
                                     </Box>
                                 </Box>
                             </Box>
                         </Box>
-                    </Box>
-                </Container>
-            </Box>
+                    </Container>
+                </Box>
+            </>
         );
     }
