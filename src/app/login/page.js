@@ -69,7 +69,8 @@ export default function loginPage() {
 
                             <Box sx = {{
                                     backgroundImage: "url('/images/Background_Img.png')",
-                                    backgroundSize: 'cover',
+                                    minHeight: '100vh',
+                                              py: 6,
                                     opacity: 0.8
                                 }}
                             >
