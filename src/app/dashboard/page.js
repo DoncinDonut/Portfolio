@@ -118,7 +118,7 @@ export default function DashboardPage() {
         </Container>
 
         {/* BUTTONS */}
-        <Stack direction="row" spacing={2} justifyContent="center" sx={{   mt: { xs: 2, md: 20 }, mb: 6,}}>
+        <Stack direction="row" spacing={2} justifyContent="center" sx={{   mt: { xs: 2, md: 20 }, mb: 6, px: { xs: 2, sm: 4 } }}>
           <Button variant="contained" onClick={() => setItems(About)} sx={{ px: { xs: 4, md: 14 } }}>
             About
           </Button>
