@@ -14,6 +14,7 @@ import IconButton from '@mui/material/IconButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
+import DescriptionIcon from '@mui/icons-material/Description';
 
 
 export default function DashboardPage() {
@@ -46,57 +47,61 @@ export default function DashboardPage() {
     <>
       <CssBaseline />
 
-        {/* github icon */}
-        <Box
-          sx={{
-            position: 'fixed',
-            top: 48,
-            right: 16,
-            zIndex: 9999,
-            padding: '4px',
-            backgroundColor: 'red', // TEMP: proves visibility
-            borderRadius: '12px',
-          }}
-        >
-          <IconButton
-            component="a"
-            href="https://github.com/DoncinDonut"
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{
-                color: 'white',
-                '&:hover': { color: '#0A66C2' }
-            }}
-          >
-            <GitHubIcon />
-          </IconButton>
+{/* DESKTOP SOCIAL ICONS */}
+<Box
+  sx={{
+    display: { xs: 'none', md: 'flex' },
+    position: 'fixed',
+    top: 48,
+    right: 24,
+    zIndex: 9999,
+    gap: 1,
+    padding: '6px',
+    borderRadius: '12px',
+    backgroundColor: 'rgba(15, 23, 42, 0.85)',
+    border: '1px solid #334155',
+    backdropFilter: 'blur(6px)',
+  }}
+>
+  <IconButton
+    component="a"
+    href="https://github.com/DoncinDonut"
+    target="_blank"
+    rel="noopener noreferrer"
+    sx={{ color: 'white' }}
+  >
+    <GitHubIcon />
+  </IconButton>
 
-            {/* LinkedIn */}
-            <IconButton
-              component="a"
-              href="https://www.linkedin.com/in/cian-donnelly-/"
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{
-                color: 'white',
-                '&:hover': { color: '#0A66C2' },
-              }}
-            >
-              <LinkedInIcon />
-            </IconButton>
+  <IconButton
+    component="a"
+    href="https://www.linkedin.com/in/cian-donnelly-/"
+    target="_blank"
+    rel="noopener noreferrer"
+    sx={{ color: 'white' }}
+  >
+    <LinkedInIcon />
+  </IconButton>
 
-            {/* Email */}
-            <IconButton
-              component="a"
-              href="mailto:ciandonnelly15@outlook.com"
-              sx={{
-                color: 'white',
-                '&:hover': { color: '#0A66C2' },
-              }}
-            >
-              <EmailIcon />
-            </IconButton>
-        </Box>
+  <IconButton
+    component="a"
+    href="mailto:ciandonnelly15@outlook.com"
+    sx={{ color: 'white' }}
+  >
+    <EmailIcon />
+  </IconButton>
+
+  <IconButton
+    component="a"
+    href="/Cian_Donnelly_CV.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    sx={{ color: 'white' }}
+  >
+    <DescriptionIcon />
+  </IconButton>
+
+</Box>
 
       <Box
         sx={{
@@ -171,6 +176,63 @@ export default function DashboardPage() {
                 </Typography>
               </Paper>
             ))}
+
+            {/* MOBILE SOCIAL FOOTER */}
+            <Box
+              sx={{
+                display: { xs: 'flex', md: 'none' },
+                position: 'fixed',
+                bottom: 0,
+                left: 0,
+                width: '100%',
+                justifyContent: 'center',
+                gap: 3,
+                py: 1.5,
+                backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                borderTop: '1px solid #1F2937',
+                zIndex: 9999,
+              }}
+            >
+              <IconButton
+                component="a"
+                href="https://github.com/DoncinDonut"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ color: 'white' }}
+              >
+                <GitHubIcon />
+              </IconButton>
+
+              <IconButton
+                component="a"
+                href="https://www.linkedin.com/in/cian-donnelly-/"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ color: 'white' }}
+              >
+                <LinkedInIcon />
+              </IconButton>
+
+              <IconButton
+                component="a"
+                href="mailto:ciandonnelly15@outlook.com"
+                sx={{ color: 'white' }}
+              >
+                <EmailIcon />
+              </IconButton>
+
+              <IconButton
+                component="a"
+                href="/Cian_Donnelly_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ color: 'white' }}
+              >
+                <DescriptionIcon />
+              </IconButton>
+
+            </Box>
+
           </Box>
         </Container>
       </Box>
