@@ -10,6 +10,11 @@ import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import CssBaseline from '@mui/material/CssBaseline';
 import Stack from '@mui/material/Stack';
+import IconButton from '@mui/material/IconButton';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
+
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -28,11 +33,70 @@ export default function DashboardPage() {
     { name: 'Small', image: '/images/Small.png', path: '/projects/project-four/' },
   ];
 
+  const Certificates = [
+    { name: 'Programming Languages', image: '/images/Language.png', path: '/certificates/cert-one' },
+    { name: 'Web Development', image: 'images/web.png', path: '/certificates/cert-two' },
+    { name: 'Networking', image: 'images/networking.png', path: '/certificates/cert-three' },
+    { name: 'AI', image: 'images/artificialIntelligence.png', path: '/certificates/cert-four' },
+  ];
+
   const [items, setItems] = React.useState(About);
 
   return (
     <>
       <CssBaseline />
+
+        {/* github icon */}
+        <Box
+          sx={{
+            position: 'fixed',
+            top: 48,
+            right: 16,
+            zIndex: 9999,
+            padding: '4px',
+            backgroundColor: 'red', // TEMP: proves visibility
+            borderRadius: '12px',
+          }}
+        >
+          <IconButton
+            component="a"
+            href="https://github.com/DoncinDonut"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+                color: 'white',
+                '&:hover': { color: '#0A66C2' }
+            }}
+          >
+            <GitHubIcon />
+          </IconButton>
+
+            {/* LinkedIn */}
+            <IconButton
+              component="a"
+              href="https://www.linkedin.com/in/cian-donnelly-/"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                color: 'white',
+                '&:hover': { color: '#0A66C2' },
+              }}
+            >
+              <LinkedInIcon />
+            </IconButton>
+
+            {/* Email */}
+            <IconButton
+              component="a"
+              href="mailto:ciandonnelly15@outlook.com"
+              sx={{
+                color: 'white',
+                '&:hover': { color: '#0A66C2' },
+              }}
+            >
+              <EmailIcon />
+            </IconButton>
+        </Box>
 
       <Box
         sx={{
@@ -55,11 +119,14 @@ export default function DashboardPage() {
 
         {/* BUTTONS */}
         <Stack direction="row" spacing={2} justifyContent="center" sx={{   mt: { xs: 2, md: 20 }, mb: 6,}}>
-          <Button variant="contained" onClick={() => setItems(About)} sx={{ px: { xs: 4, md: 18 } }}>
+          <Button variant="contained" onClick={() => setItems(About)} sx={{ px: { xs: 4, md: 14 } }}>
             About
           </Button>
-          <Button variant="contained" onClick={() => setItems(Projects)} sx={{ px: { xs: 4, md: 18 } }}>
+          <Button variant="contained" onClick={() => setItems(Projects)} sx={{ px: { xs: 4, md: 14 } }}>
             Projects
+          </Button>
+          <Button variant="contained" onClick={() => setItems(Certificates)} sx={{ px: { xs: 4, md: 14 } }}>
+            Certificates
           </Button>
         </Stack>
 
