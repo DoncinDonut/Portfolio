@@ -34,47 +34,43 @@ export default function EducationPage() {
   }}
 >
   <Container
-    maxWidth="lg"
+    maxWidth="xl"
+    disableGutters
     sx={{
-      position: 'relative',
       height: 64,
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'space-between',
+      px: { xs: 0, md: 0}
+
     }}
   >
-    {/* LEFT: BACK ARROW (PHONES ONLY) */}
-    <Box sx={{
-                position: 'absolute',
-                left: '10px',
-                display: { xs: 'block', md: 'none' },
-            }}
-        >
-        <IconButton
-            onClick={() => router.back()}
-            sx={{ color: '#E5E7EB' }}
-        >
-            <ArrowBackIosNewIcon />
-        </IconButton>
-    </Box>
+    {/* LEFT */}
+    <IconButton
+      onClick={() => router.back()}
+      sx={{ color: '#E5E7EB' }}
+    >
+      <ArrowBackIosNewIcon />
+    </IconButton>
 
-
-    {/* CENTER: TITLE */}
+    {/* CENTER */}
     <Typography
       sx={{
+        position: 'absolute', // keeps title centered
+        left: '50%',
+        transform: 'translateX(-50%)',
         fontWeight: 700,
-        fontSize: '25px',
+        fontSize: '1.75rem',
         color: '#E5E7EB',
+        pointerEvents: 'none', // avoids blocking clicks
       }}
     >
       Education
     </Typography>
 
-    {/* RIGHT: DESKTOP ICONS */}
+    {/* RIGHT — DESKTOP ONLY */}
     <Box
       sx={{
-        position: 'absolute',
-        left: '95%',
         display: { xs: 'none', md: 'flex' },
         gap: 1,
       }}
@@ -116,6 +112,7 @@ export default function EducationPage() {
     </Box>
   </Container>
 </Box>
+
 
 
       {/* ================= PAGE CONTENT ================= */}
