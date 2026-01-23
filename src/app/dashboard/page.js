@@ -21,24 +21,24 @@ export default function DashboardPage() {
   const router = useRouter();
 
   const About = [
-    { name: 'Tech Stack', image: '/images/techstack.png', path: '/dashboard/techstack/' },
-    { name: 'Education', image: '/images/Education.png', path: '/dashboard/education/' },
-    { name: 'Experience', image: '/images/Experience.png', path: '/dashboard/experience/' },
-    { name: 'Interests', image: '/images/Interests.png', path: '/dashboard/interests/' },
+    { name: 'Tech Stack', image: '/images/techstack.png', path: '/dashboard/about/techstack/' },
+    { name: 'Education', image: '/images/Education.png', path: '/dashboard/about/education/' },
+    { name: 'Experience', image: '/images/Experience.png', path: '/dashboard/about/experience/' },
+    { name: 'Interests', image: '/images/Interests.png', path: '/dashboard/about/interests/' },
   ];
 
   const Projects = [
-    { name: 'Featured', image: '/images/Featured.png', path: '/projects/project-one/' },
-    { name: 'Personal', image: '/images/Curiosity.png', path: '/projects/project-two/' },
-    { name: 'AI', image: '/images/AI.png', path: '/projects/project-three/' },
-    { name: 'Small', image: '/images/Small.png', path: '/projects/project-four/' },
+    { name: 'Featured', image: '/images/Featured.png', path: '/dashboard/projects/featured/' },
+    { name: 'Personal', image: '/images/Curiosity.png', path: '/dashboard/projects/personal/' },
+    { name: 'AI', image: '/images/AI.png', path: '/dashboard/projects/ai/' },
+    { name: 'Small', image: '/images/Small.png', path: '/dashboard/projects/small/' },
   ];
 
   const Certificates = [
-    { name: 'Programming Languages', image: '/images/Language.png', path: '/certificates/cert-one' },
-    { name: 'Web Development', image: 'images/web.png', path: '/certificates/cert-two' },
-    { name: 'Networking', image: 'images/networking.png', path: '/certificates/cert-three' },
-    { name: 'AI', image: 'images/artificialIntelligence.png', path: '/certificates/cert-four' },
+    { name: 'Programming Languages', image: '/images/Language.png', path: '/dashboard/certificates/programmingLanguages/' },
+    { name: 'Web Development', image: 'images/web.png', path: '/dashboard/certificates/webDevelopment/' },
+    { name: 'Networking', image: 'images/networking.png', path: '/dashboard/certificates/networking/' },
+    { name: 'AI', image: 'images/artificialIntelligence.png', path: '/dashboard/certificates/artificialIntelligence/' },
   ];
 
   const [items, setItems] = React.useState(About);
