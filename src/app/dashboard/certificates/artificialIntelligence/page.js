@@ -65,7 +65,7 @@ export default function ArtificialIntelligencePage() {
         pointerEvents: 'none', // avoids blocking clicks
       }}
     >
-      Artificial Intelligence
+      AI
     </Typography>
 
     {/* RIGHT — DESKTOP ONLY */}
