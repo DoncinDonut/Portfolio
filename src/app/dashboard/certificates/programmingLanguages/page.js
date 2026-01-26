@@ -65,7 +65,7 @@ export default function ProgrammingLanguagesPage() {
         pointerEvents: 'none', // avoids blocking clicks
       }}
     >
-      Programming Languages
+      Languages
     </Typography>
 
     {/* RIGHT — DESKTOP ONLY */}
