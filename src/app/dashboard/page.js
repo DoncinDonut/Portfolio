@@ -2,6 +2,7 @@
 
 import * as React from 'react';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
@@ -41,7 +42,8 @@ export default function DashboardPage() {
     { name: 'AI', image: 'images/artificialIntelligence.png', path: '/dashboard/certificates/artificialIntelligence/' },
   ];
 
-  const [items, setItems] = React.useState(About);
+    const [active, setActive] = useState('About'); // 👈 DEFINE IT HERE
+    const [items, setItems] = useState(About);
 
   return (
     <>
@@ -124,13 +126,43 @@ export default function DashboardPage() {
 
         {/* BUTTONS */}
         <Stack direction="row" spacing={2} justifyContent="center" sx={{   mt: { xs: 2, md: 20 }, mb: 6, px: { xs: 2, sm: 4 } }}>
-          <Button variant="contained" onClick={() => setItems(About)} sx={{ px: { xs: 4, md: 14 } }}>
+          <Button
+            variant="contained"
+            onClick={() => {
+              setItems(About);
+              setActive('About');
+            }}
+            sx={{
+              backgroundColor: active === 'About' ? 'red' : '0F172A',
+              px: { xs: 4, md: 14 },
+            }}
+          >
             About
           </Button>
-          <Button variant="contained" onClick={() => setItems(Projects)} sx={{ px: { xs: 4, md: 14 } }}>
+            <Button
+              variant="contained"
+              onClick={() => {
+                setItems(Projects);
+                setActive('Projects');
+              }}
+              sx={{
+                backgroundColor: active === 'Projects' ? 'red' : '0F172A',
+                px: { xs: 4, md: 14 },
+              }}
+            >
             Projects
           </Button>
-          <Button variant="contained" onClick={() => setItems(Certificates)} sx={{ px: { xs: 4, md: 14 } }}>
+          <Button
+            variant="contained"
+            onClick={() => {
+              setItems(Certificates);
+              setActive('Certificates');
+            }}
+            sx={{
+              backgroundColor: active === 'Certificates' ? 'red' : '0F172A',
+              px: { xs: 4, md: 14 },
+            }}
+          >
             Certificates
           </Button>
         </Stack>
