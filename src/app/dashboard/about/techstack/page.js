@@ -152,7 +152,7 @@ export default function TechStackPage() {
             left: 0,
             width: '100%',
             justifyContent: 'center',
-            gap: 3,
+            gap: 7,
             py: 1.5,
             backgroundColor: 'rgba(15, 23, 42, 0.95)',
             borderTop: '1px solid #1F2937',

@@ -14,6 +14,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import DescriptionIcon from '@mui/icons-material/Description';
+import Grid from '@mui/material/Grid';
 
 
 export default function WebDevelopmentPage() {
@@ -65,7 +66,7 @@ export default function WebDevelopmentPage() {
         pointerEvents: 'none', // avoids blocking clicks
       }}
     >
-      Web Development
+      Web Dev
     </Typography>
 
     {/* RIGHT — DESKTOP ONLY */}
@@ -128,20 +129,181 @@ export default function WebDevelopmentPage() {
         }}
       >
         <Container maxWidth="md">
-          <Paper
-            sx={{
-              p: 4,
-              backgroundColor: '#0F172A',
-              border: '1px solid #1F2937',
-              borderRadius: 3,
-              textAlign: 'center',
-            }}
-          >
-            <Typography color="#E5E7EB">
-              Content goes here
-            </Typography>
-          </Paper>
-        </Container>
+           <Paper
+                component="a"
+                href="/images/certificates/web/phpL1.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              sx={{
+                p: 3,
+                display: 'flex',
+                backgroundColor: '#0F172A',
+                border: '1px solid #1F2937',
+                borderRadius: 3,
+                maxWidth: 900,
+                mx: 'auto',
+                mt: 3,
+                '&:hover': {
+                  borderColor: '#38BDF8'
+                },
+              }}
+            >
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  flexDirection: { xs: 'column', md: 'row' }, // 👈 KEY LINE
+                }}
+              >
+                {/* LEFT — IMAGE */}
+                <Box sx={{ flex: 1 }}>
+                  <Box
+                    component="img"
+                    src="/images/certificates/web/phpL1.png"
+                    alt="PHP Level 1 Certificate"
+                    sx={{
+                      display: 'block',
+                      mx: { xs: 'auto'},
+                      p: 2,
+                      mb: 2,
+                      width: '70%',
+                      borderRadius: 2,
+                      border: '2px solid #334155',
+                    }}
+                  />
+                </Box>
+
+                {/* RIGHT — TEXT */}
+                <Box sx={{ flex: 2 }}>
+                  <Typography variant="h5" sx={{ color: '#E5E7EB', mb: 1 }}>
+                    PHP Level 1 Certificate
+                  </Typography>
+
+                  <Typography sx={{ color: '#CBD5F5', lineHeight: 1.6 }}>
+                    I obtained a SymfonyCasts PHP Level 1 certificate, demonstrating a solid
+                    foundation in modern PHP syntax and core concepts.
+                  </Typography>
+                </Box>
+              </Box>
+            </Paper>
+
+           <Paper
+                component="a"
+                href="/images/certificates/web/phpL2.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              sx={{
+                p: 3,
+                display: 'flex',
+                backgroundColor: '#0F172A',
+                border: '1px solid #1F2937',
+                borderRadius: 3,
+                maxWidth: 900,
+                mx: 'auto',
+                mt: 3,
+                '&:hover': {
+                  borderColor: '#38BDF8'
+                },
+              }}
+            >
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  flexDirection: { xs: 'column', md: 'row' }
+                }}
+              >
+                {/* LEFT — IMAGE */}
+                <Box sx={{ flex: 1 }}>
+                  <Box
+                    component="img"
+                    src="/images/certificates/web/phpL2.png"
+                    alt="PHP Level 2 Certificate"
+                    sx={{
+                      display: 'block',
+                      mx: { xs: 'auto'},
+                      p: 2,
+                      mb: 2,
+                      width: '70%',
+                      borderRadius: 2,
+                      border: '2px solid #334155',
+                    }}
+                  />
+                </Box>
+
+                {/* RIGHT — TEXT */}
+                <Box sx={{ flex: 2 }}>
+                  <Typography variant="h5" sx={{ color: '#E5E7EB', mb: 1 }}>
+                    PHP Level 2 Certificate
+                  </Typography>
+
+                  <Typography sx={{ color: '#CBD5F5', lineHeight: 1.6 }}>
+                    I obtained a SymfonyCasts PHP Level 2 certificate, demonstrating deeper knowledge of
+                    PHP, namespaces, interfaces, and error handling.
+                  </Typography>
+                </Box>
+              </Box>
+            </Paper>
+
+           <Paper
+                component="a"
+                href="/images/certificates/web/phpL3.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              sx={{
+                p: 3,
+                display: 'flex',
+                backgroundColor: '#0F172A',
+                border: '1px solid #1F2937',
+                borderRadius: 3,
+                maxWidth: 900,
+                mx: 'auto',
+                mt: 3,
+                '&:hover': {
+                  borderColor: '#38BDF8'
+                },
+              }}
+            >
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  flexDirection: { xs: 'column', md: 'row' }
+                }}
+              >
+                {/* LEFT — IMAGE */}
+                <Box sx={{ flex: 1 }}>
+                  <Box
+                    component="img"
+                    src="/images/certificates/web/phpL3.png"
+                    alt="PHP Level 3 Certificate"
+                    sx={{
+                      display: 'block',
+                      mx: { xs: 'auto'},
+                      p: 2,
+                      mb: 2,
+                      width: '70%',
+                      borderRadius: 2,
+                      border: '2px solid #334155',
+                    }}
+                  />
+                </Box>
+
+                {/* RIGHT — TEXT */}
+                <Box sx={{ flex: 2 }}>
+                  <Typography variant="h5" sx={{ color: '#E5E7EB', mb: 1 }}>
+                    PHP Level 3 Certificate
+                  </Typography>
+
+                  <Typography sx={{ color: '#CBD5F5', lineHeight: 1.6 }}>
+                    I obtained a SymfonyCasts PHP Level 3 certificate, validating
+                    advanced PHP skills including design patterns,
+                    SOLID principles, and writing maintainable,
+                    production-ready code.
+                  </Typography>
+                </Box>
+              </Box>
+            </Paper>
 
         {/* ================= MOBILE FOOTER ================= */}
         <Box
@@ -152,7 +314,7 @@ export default function WebDevelopmentPage() {
             left: 0,
             width: '100%',
             justifyContent: 'center',
-            gap: 3,
+            gap: 7,
             py: 1.5,
             backgroundColor: 'rgba(15, 23, 42, 0.95)',
             borderTop: '1px solid #1F2937',
@@ -195,6 +357,7 @@ export default function WebDevelopmentPage() {
           </IconButton>
         </Box>
 
+        </Container>
       </Box>
     </>
   );

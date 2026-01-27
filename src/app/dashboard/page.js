@@ -54,7 +54,7 @@ export default function DashboardPage() {
   sx={{
     display: { xs: 'none', md: 'flex' },
     position: 'fixed',
-    top: 48,
+    top: 40,
     right: 24,
     zIndex: 9999,
     gap: 1,
@@ -133,7 +133,7 @@ export default function DashboardPage() {
               setActive('About');
             }}
             sx={{
-              backgroundColor: active === 'About' ? 'red' : '0F172A',
+              backgroundColor: active === 'About' ? '#e17272' : '0F172A',
               px: { xs: 4, md: 14 },
             }}
           >
@@ -146,7 +146,7 @@ export default function DashboardPage() {
                 setActive('Projects');
               }}
               sx={{
-                backgroundColor: active === 'Projects' ? 'red' : '0F172A',
+                backgroundColor: active === 'Projects' ? '#e17272' : '0F172A',
                 px: { xs: 4, md: 14 },
               }}
             >
@@ -159,7 +159,7 @@ export default function DashboardPage() {
               setActive('Certificates');
             }}
             sx={{
-              backgroundColor: active === 'Certificates' ? 'red' : '0F172A',
+              backgroundColor: active === 'Certificates' ? '#e17272' : '0F172A',
               px: { xs: 4, md: 14 },
             }}
           >
@@ -173,6 +173,7 @@ export default function DashboardPage() {
               display: 'grid',
               gridTemplateColumns: 'repeat(2, 1fr)',
               gap: 4,
+              mb: 6
             }}
           >
             {items.map((item, index) => (
@@ -218,11 +219,11 @@ export default function DashboardPage() {
                 left: 0,
                 width: '100%',
                 justifyContent: 'center',
-                gap: 3,
+                gap: 7,
                 py: 1.5,
                 backgroundColor: 'rgba(15, 23, 42, 0.95)',
                 borderTop: '1px solid #1F2937',
-                zIndex: 9999,
+                zIndex: 9999
               }}
             >
               <IconButton
