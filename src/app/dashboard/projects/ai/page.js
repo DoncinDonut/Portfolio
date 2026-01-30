@@ -16,7 +16,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import DescriptionIcon from '@mui/icons-material/Description';
 
 
-export default function ArtificialIntelligencePage() {
+export default function systemsPage() {
   const router = useRouter();
 
   return (
@@ -65,7 +65,7 @@ export default function ArtificialIntelligencePage() {
         pointerEvents: 'none', // avoids blocking clicks
       }}
     >
-      AI
+      Systems
     </Typography>
 
     {/* RIGHT — DESKTOP ONLY */}

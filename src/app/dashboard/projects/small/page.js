@@ -16,7 +16,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import DescriptionIcon from '@mui/icons-material/Description';
 
 
-export default function SmallPage() {
+export default function labsPage() {
   const router = useRouter();
 
   return (
@@ -65,7 +65,7 @@ export default function SmallPage() {
         pointerEvents: 'none', // avoids blocking clicks
       }}
     >
-      Small
+      Labs
     </Typography>
 
     {/* RIGHT — DESKTOP ONLY */}

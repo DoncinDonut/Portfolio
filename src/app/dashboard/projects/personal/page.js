@@ -65,7 +65,7 @@ export default function PersonalPage() {
         pointerEvents: 'none', // avoids blocking clicks
       }}
     >
-      Personal
+      Web
     </Typography>
 
     {/* RIGHT — DESKTOP ONLY */}

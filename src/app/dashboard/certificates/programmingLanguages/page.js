@@ -128,19 +128,63 @@ export default function ProgrammingLanguagesPage() {
         }}
       >
         <Container maxWidth="md">
-          <Paper
-            sx={{
-              p: 4,
-              backgroundColor: '#0F172A',
-              border: '1px solid #1F2937',
-              borderRadius: 3,
-              textAlign: 'center',
-            }}
-          >
-            <Typography color="#E5E7EB">
-              Content goes here
-            </Typography>
-          </Paper>
+            <Paper
+                component="a"
+                href="https://www.kaggle.com/learn/certification/cndonnelly/python"
+                target="_blank"
+                rel="noopener noreferrer"
+              sx={{
+                p: 3,
+                display: 'flex',
+                backgroundColor: '#0F172A',
+                border: '1px solid #1F2937',
+                borderRadius: 3,
+                maxWidth: 900,
+                mx: 'auto',
+                mt: 3,
+                '&:hover': {
+                  borderColor: '#38BDF8'
+                },
+              }}
+            >
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  flexDirection: { xs: 'column', md: 'row' }
+                }}
+              >
+                {/* LEFT — IMAGE */}
+                <Box sx={{ flex: 1 }}>
+                  <Box
+                    component="img"
+                    src="/images/certificates/languages/Python.png"
+                    alt="PHP Level 1 Certificate"
+                    sx={{
+                      display: 'block',
+                      mx: { xs: 'auto'},
+                      p: 2,
+                      mb: 2,
+                      width: '70%',
+                      borderRadius: 2,
+                      border: '2px solid #334155'
+                    }}
+                  />
+                </Box>
+
+                {/* RIGHT — TEXT */}
+                <Box sx={{ flex: 2 }}>
+                  <Typography variant="h5" sx={{ color: '#E5E7EB', mb: 1 }}>
+                    Fundamentals of Python Certificate
+                  </Typography>
+
+                  <Typography sx={{ color: '#CBD5F5', lineHeight: 1.6 }}>
+                    I obtained the fundamentals of Python certificate, demonstrating a solid
+                    foundation in practical exercises covering core Python syntax, control flow, and data structures.
+                  </Typography>
+                </Box>
+              </Box>
+            </Paper>
         </Container>
 
         {/* ================= MOBILE FOOTER ================= */}

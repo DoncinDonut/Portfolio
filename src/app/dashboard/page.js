@@ -30,16 +30,16 @@ export default function DashboardPage() {
 
   const Projects = [
     { name: 'Featured', image: '/images/Featured.png', path: '/dashboard/projects/featured/' },
-    { name: 'Personal', image: '/images/Curiosity.png', path: '/dashboard/projects/personal/' },
-    { name: 'AI', image: '/images/AI.png', path: '/dashboard/projects/ai/' },
-    { name: 'Small', image: '/images/Small.png', path: '/dashboard/projects/small/' },
+    { name: 'Web', image: '/images/Curiosity.png', path: '/dashboard/projects/personal/' },
+    { name: 'Systems', image: '/images/AI.png', path: '/dashboard/projects/ai/' },
+    { name: 'Labs', image: '/images/Small.png', path: '/dashboard/projects/small/' },
   ];
 
   const Certificates = [
     { name: 'Programming Languages', image: '/images/Language.png', path: '/dashboard/certificates/programmingLanguages/' },
     { name: 'Web Development', image: 'images/web.png', path: '/dashboard/certificates/webDevelopment/' },
     { name: 'Networking', image: 'images/networking.png', path: '/dashboard/certificates/networking/' },
-    { name: 'AI', image: 'images/artificialIntelligence.png', path: '/dashboard/certificates/artificialIntelligence/' },
+    { name: 'Systems', image: 'images/artificialIntelligence.png', path: '/dashboard/certificates/artificialIntelligence/' },
   ];
 
     const [active, setActive] = useState('About'); // 👈 DEFINE IT HERE
