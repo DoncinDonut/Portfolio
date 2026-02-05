@@ -349,7 +349,7 @@ export default function WebDevelopmentPage() {
 
           <IconButton
             component="a"
-            href="/Cian_Donnelly_CV.pdf"
+            href="/cv/CV.pdf"
             target="_blank"
             sx={{ color: 'white' }}
           >
