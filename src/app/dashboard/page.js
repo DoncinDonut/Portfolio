@@ -95,7 +95,7 @@ export default function DashboardPage() {
 
   <IconButton
     component="a"
-    href="/CV.pdf"
+    href="public/CV.pdf"
     target="_blank"
     rel="noopener noreferrer"
     sx={{ color: 'white' }}
