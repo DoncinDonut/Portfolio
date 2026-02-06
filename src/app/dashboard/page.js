@@ -42,7 +42,7 @@ export default function DashboardPage() {
     { name: 'Systems', image: 'images/artificialIntelligence.png', path: '/dashboard/certificates/artificialIntelligence/' },
   ];
 
-    const [active, setActive] = useState('About'); // 👈 DEFINE IT HERE
+    const [active, setActive] = useState('About');
     const [items, setItems] = useState(About);
 
   return (
@@ -119,8 +119,8 @@ export default function DashboardPage() {
           </Typography>
 
           <Typography color="#9CA3AF">
-            I am currently a 3rd year student studying Informatics and Computing at
-            Technological University Dublin.
+            I am currently a 3rd year student studying Computing (Information Technology) at
+            Technological University Dublin, Blanchardstown.
           </Typography>
         </Container>
 
